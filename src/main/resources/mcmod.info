@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nose",
+  "name": "Nose Mod",
+  "description": "Block Loading Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["twetzel59", "beck3k"],
+  "credits": "The Authors",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
