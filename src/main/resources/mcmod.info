@@ -1,14 +1,14 @@
 [
 {
   "modid": "nose",
-  "name": "Nose 12",
-  "description": "Block Loading Mod",
+  "name": "NOSE Mod 12",
+  "description": "Block Loader",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["twetzel59", "beck3k"],
-  "credits": "The Authors",
+  "authorList": ["beck3k", "twetzel59"],
+  "credits": "Nose team",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
