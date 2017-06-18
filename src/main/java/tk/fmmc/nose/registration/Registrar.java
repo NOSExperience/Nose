@@ -25,29 +25,27 @@ public class Registrar {
 		}
 		
 		Material mat = DEFAULT_MATERIAL;
+		CreativeTabs tab = DEFAULT_INVENTORY_TAB;
 		
 		if(spec.getMaterialName() != null) {
 			mat = parseMaterial(spec.getMaterialName());
 		}
 		
-		Block block = new Block(mat)
-					.setRegistryName(spec.getRegistryName());
+		if(spec.getInventoryTab() != null) {
+			tab = parseInventoryTab(spec.getInventoryTab());
+		}
 		
-		GameRegistry.register(block);
+		Block b = new Block(Material.GROUND)
+				.setRegistryName(spec.getRegistryName())
+				.setUnlocalizedName(spec.getRegistryName())
+				.setCreativeTab(tab);
+		GameRegistry.register(b);
 		
-//		try {
-//			ItemBlock item = new ItemBlock(block);
-//			//item.setRegistryName(spec.getRegistryName());
-//			if(spec.getInventoryTab() != null) {
-//				item.setCreativeTab(parseInventoryTab(spec.getInventoryTab()));
-//			}
-//			item.setUnlocalizedName(spec.getRegistryName());
-//			
-//			GameRegistry.register(item);
-//		} catch(Exception e) {
-//			System.err.println(e.getMessage());
-//			e.printStackTrace();
-//		}
+		ItemBlock i = new ItemBlock(b);
+		i.setRegistryName(spec.getRegistryName());
+		i.setUnlocalizedName(spec.getRegistryName());
+		i.setCreativeTab(tab);
+		GameRegistry.register(i);
 	}
 	
 	private static void registerItem(ItemSpecification spec) {
