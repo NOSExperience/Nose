@@ -3,6 +3,10 @@ package tk.fmmc.nose.main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
@@ -46,6 +50,7 @@ public class GetCommand implements ICommand {
 		} catch (Exception e) {
 			throw new CommandException("Error downloading", "err");
 		}
+		
 	}
 
 	@Override
