@@ -14,6 +14,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import tk.fmmc.nose.network.Downloader;
+import tk.fmmc.nose.network.message.NoseRefresh;
+import tk.fmmc.nose.network.message.Wrapper;
 import tk.fmmc.nose.registration.Discoverer;
 
 public class GetCommand implements ICommand {
@@ -51,6 +53,8 @@ public class GetCommand implements ICommand {
 			throw new CommandException("Error downloading", "err");
 		}
 		
+		//System.out.println("Sending...");
+		//Wrapper.INSTANCE.sendToAll(new NoseRefresh(10));
 	}
 
 	@Override
