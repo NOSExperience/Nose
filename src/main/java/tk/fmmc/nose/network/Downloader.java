@@ -18,7 +18,7 @@ import scala.actors.threadpool.Arrays;
 
 public class Downloader {
 	
-	private static final String SITE = "http://localhost/nose12/";
+	public 	static final String SITE = "http://localhost/nose12/";
 	private static final String LISTING = SITE + "listing.php";
 	private static final String XML_DIR = SITE + "xml/";
 	private static final String RES_DIR = SITE + "res/";

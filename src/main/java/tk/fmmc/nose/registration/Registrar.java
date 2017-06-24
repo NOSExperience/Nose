@@ -35,17 +35,21 @@ public class Registrar {
 			tab = parseInventoryTab(spec.getInventoryTab());
 		}
 		
-		Block b = new Block(Material.GROUND)
-				.setRegistryName(spec.getRegistryName())
-				.setUnlocalizedName(spec.getRegistryName())
-				.setCreativeTab(tab);
-		GameRegistry.register(b);
-		
-		ItemBlock i = new ItemBlock(b);
-		i.setRegistryName(spec.getRegistryName());
-		i.setUnlocalizedName(spec.getRegistryName());
-		i.setCreativeTab(tab);
-		GameRegistry.register(i);
+		try{
+			Block b = new Block(Material.GROUND)
+					.setRegistryName(spec.getRegistryName())
+					.setUnlocalizedName(spec.getRegistryName())
+					.setCreativeTab(tab);
+			GameRegistry.register(b);
+			
+			ItemBlock i = new ItemBlock(b);
+			i.setRegistryName(spec.getRegistryName());
+			i.setUnlocalizedName(spec.getRegistryName());
+			i.setCreativeTab(tab);
+			GameRegistry.register(i);
+		} catch(Exception e){
+			System.out.println("Error occured or Block already registered: " + spec.getRegistryName());
+		}
 	}
 	
 	private static void registerItem(ItemSpecification spec) {

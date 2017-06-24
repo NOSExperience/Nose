@@ -42,16 +42,16 @@ public class GetCommand implements ICommand {
 
 	@Override
 	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
-		sender.sendMessage(new TextComponentString("Downloading..."));
+//		sender.sendMessage(new TextComponentString("Downloading..."));
 		
-		try {
-			Downloader.download();
-			
-			Discoverer ds = new Discoverer();
-			ds.run();
-		} catch (Exception e) {
-			throw new CommandException("Error downloading", "err");
-		}
+//		try {
+//			Downloader.download();
+//			
+//			Discoverer ds = new Discoverer();
+//			ds.run();
+//		} catch (Exception e) {
+//			throw new CommandException("Error downloading", "err");
+//		}
 		
 		//System.out.println("Sending...");
 		//Wrapper.INSTANCE.sendToAll(new NoseRefresh(10));
